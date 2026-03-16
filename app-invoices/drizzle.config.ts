@@ -1,15 +1,15 @@
-import { defineConfig } from "drizzle-kit";
+import { defineConfig } from 'drizzle-kit'
 
 if (!process.env.DATABASE_URL) {
-  throw new Error("DATABASE_URL must be configured.");
+  throw new Error('DATABASE_URL must be configured.')
 }
 
 export default defineConfig({
-  dialect: "postgresql",
+  dialect: 'postgresql',
   dbCredentials: {
     url: process.env.DATABASE_URL,
   },
-  schema: "src/db/schema/*",
-  out: "src/db/migrations",
-  casing: "snake_case",
-});
+  schema: 'src/db/schema/*',
+  out: 'src/db/migrations',
+  casing: 'snake_case',
+})

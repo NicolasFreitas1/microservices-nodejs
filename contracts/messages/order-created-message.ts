@@ -1,7 +1,7 @@
 export interface OrderCreatedMessage {
-  orderId: string;
-  amount: number;
+  orderId: string
+  amount: number
   customer: {
-    id: string;
-  };
+    id: string
+  },
 }

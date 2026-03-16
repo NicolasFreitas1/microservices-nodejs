@@ -1,5 +1,5 @@
 {
-  "id": "83ed1abc-8e88-4de0-990a-2939b0253732",
+  "id": "b376a9b8-d872-4cb2-8ba4-9f1b09e94cad",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -12,6 +12,12 @@
           "name": "id",
           "type": "text",
           "primaryKey": true,
+          "notNull": true
+        },
+        "customer_id": {
+          "name": "customer_id",
+          "type": "text",
+          "primaryKey": false,
           "notNull": true
         },
         "amount": {

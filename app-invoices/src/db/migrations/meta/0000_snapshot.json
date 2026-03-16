@@ -1,11 +1,11 @@
 {
-  "id": "83ed1abc-8e88-4de0-990a-2939b0253732",
+  "id": "4b1ce1bb-5e05-4931-9cab-3822e526e162",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
-    "public.orders": {
-      "name": "orders",
+    "public.invoices": {
+      "name": "invoices",
       "schema": "",
       "columns": {
         "id": {
@@ -14,19 +14,11 @@
           "primaryKey": true,
           "notNull": true
         },
-        "amount": {
-          "name": "amount",
-          "type": "integer",
+        "order_id": {
+          "name": "order_id",
+          "type": "text",
           "primaryKey": false,
           "notNull": true
-        },
-        "status": {
-          "name": "status",
-          "type": "order_status",
-          "typeSchema": "public",
-          "primaryKey": false,
-          "notNull": true,
-          "default": "'pending'"
         },
         "created_at": {
           "name": "created_at",
@@ -45,17 +37,7 @@
       "isRLSEnabled": false
     }
   },
-  "enums": {
-    "public.order_status": {
-      "name": "order_status",
-      "schema": "public",
-      "values": [
-        "pending",
-        "paid",
-        "canceled"
-      ]
-    }
-  },
+  "enums": {},
   "schemas": {},
   "sequences": {},
   "roles": {},

@@ -1,8 +1,8 @@
-import { date, integer } from "drizzle-orm/pg-core";
-import { text } from "drizzle-orm/pg-core";
-import { pgTable } from "drizzle-orm/pg-core";
+import { date, integer } from 'drizzle-orm/pg-core'
+import { text } from 'drizzle-orm/pg-core'
+import { pgTable } from 'drizzle-orm/pg-core'
 
-export const customers = pgTable("customers", {
+export const customers = pgTable('customers', {
   id: text().primaryKey(),
   name: text().notNull(),
   email: text().notNull().unique(),
@@ -10,5 +10,5 @@ export const customers = pgTable("customers", {
   state: text().notNull(),
   zipCode: text().notNull(),
   country: text().notNull(),
-  dateOfBirth: date({ mode: "date" }),
-});
+  dateOfBirth: date({ mode: 'date' }),
+})
